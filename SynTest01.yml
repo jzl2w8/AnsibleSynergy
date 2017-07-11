@@ -15,4 +15,7 @@
       oneview_connection_template_facts:
         config: "{{ config }}"
       delegate_to: localhost
+    environment:
+      PYTHONPATH: "{{ansible_env.PYTHONPATH}}:/opt/oneview-ansible/library"
+      ANSIBLE_LIBRARY: "/path/to/oneview-ansible/library"
 
