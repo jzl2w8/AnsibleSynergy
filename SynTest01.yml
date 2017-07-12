@@ -3,16 +3,12 @@
   gather_facts: True
   connection: local
   user: remote
-
-  vars:
-    - config: "/opt/variables/oneview_config.json"  
- # environment:
- #   ANSIBLE_LIBRARY: "/usr/lib/python2.7/site-packages/hpOneView/oneview-ansible/library"
- #   PYTHONPATH: "/usr/lib/python2.7/site-packages/hpOneView/oneview-ansible/library"
+  
+  #vars:
+    #- config: "/opt/creds.json" 
   
   tasks:
     - name: Gather facts about all Connection Templates
       oneview_connection_template_facts:
-        config: "{{ config }}"
+      #  config: "{{ config }}"
       delegate_to: localhost
-
