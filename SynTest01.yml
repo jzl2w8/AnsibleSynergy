@@ -4,11 +4,11 @@
   connection: local
   user: remote
   
-  vars:
-    - config: "/opt/creds.json" 
+  #vars:
+    #- config: "/opt/creds.json" 
   
   tasks:
     - name: Gather facts about all Connection Templates
       oneview_connection_template_facts:
-        config: "{{ config }}"
+      #  config: "{{ config }}"
       delegate_to: localhost
